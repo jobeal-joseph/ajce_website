@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Home = () => {
     return (
-        <section id="home" className="relative min-h-screen bg-ajce-dark text-white overflow-hidden flex items-center justify-center">
+        <section id="home" className="relative min-h-screen text-white overflow-hidden flex items-center justify-center">
             {/* 3D Background */}
             <HeroScene />
 

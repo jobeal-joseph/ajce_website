@@ -1,7 +1,7 @@
 import RevealText from '../components/layout/RevealText.jsx';
 
 const About = () => (
-    <section id="about" className="min-h-screen bg-black text-white flex flex-col justify-center p-8">
+    <section id="about" className="min-h-screen text-white flex flex-col justify-center p-8">
         <div className="container mx-auto">
             <RevealText text="OUR LEGACY" className="text-4xl md:text-6xl font-serif mb-12 text-white" />
             <div className="prose prose-invert max-w-2xl">

@@ -8,8 +8,9 @@ export default {
     extend: {
       colors: {
         'ajce-blue': '#002147', // Oxford Blue - Classic Elite
+        'ajce-navy': '#002147', // Alias for clarity
         'ajce-gold': '#cfb53b', // Vegas Gold - Premium
-        'ajce-dark': '#0a0a0a', // Modern Dark
+        'ajce-dark': '#001229', // Deep Navy (replacing black)
         'ajce-gray': '#e5e5e5', // Light Gray
       },
       fontFamily: {

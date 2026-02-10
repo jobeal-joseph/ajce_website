@@ -13,7 +13,7 @@ function App() {
 
   return (
     <ReactLenis root>
-      <div className="antialiased bg-ajce-dark text-white min-h-screen selection:bg-ajce-gold selection:text-black">
+      <div className="antialiased text-white min-h-screen selection:bg-ajce-gold selection:text-black">
         <Navbar />
         <main>
           <Home />
