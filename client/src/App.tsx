@@ -4,7 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import Departments from './pages/Departments';
-import Faculty from './pages/Faculty';
+import Placements from './pages/Placements';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { useLocation } from 'react-router-dom';
@@ -19,7 +19,7 @@ function App() {
           <Home />
           <Courses />
           <Departments />
-          <Faculty />
+          <Placements />
           <About />
           <Contact />
         </main>

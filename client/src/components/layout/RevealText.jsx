@@ -3,7 +3,7 @@ import { motion, useInView } from 'framer-motion';
 
 const RevealText = ({ text = "", className = "", delay = 0 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
   
   if (!text) return null;
   const words = text.split(" ");

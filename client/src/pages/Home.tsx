@@ -1,12 +1,19 @@
-import HeroScene from '../components/3d/HeroScene';
+
 import RevealText from '../components/layout/RevealText.jsx';
 import { ArrowRight } from 'lucide-react';
 
 const Home = () => {
     return (
         <section id="home" className="relative min-h-screen text-white overflow-hidden flex items-center justify-center">
-            {/* 3D Background */}
-            <HeroScene />
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/ajce_campus.jpg"
+                    alt="Amal Jyothi College Campus"
+                    className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ajce-dark via-ajce-dark/50 to-transparent" />
+            </div>
 
             {/* Content Overlay */}
             <div className="relative z-10 flex flex-col justify-center items-center h-full px-4 text-center pointer-events-none">

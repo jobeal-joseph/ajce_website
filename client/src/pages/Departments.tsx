@@ -1,7 +1,7 @@
 import RevealText from '../components/layout/RevealText.jsx';
 
 const Departments = () => (
-    <section id="departments" className="min-h-screen text-white flex flex-col justify-center p-8">
+    <section id="departments" className="min-h-screen text-white flex flex-col justify-center p-8 scroll-mt-20">
         <div className="container mx-auto">
             <RevealText text="DEPARTMENTS" className="text-4xl md:text-6xl font-serif mb-12 text-white" />
             <p className="text-xl text-gray-400 max-w-2xl mb-8">
