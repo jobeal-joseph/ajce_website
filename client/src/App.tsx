@@ -1,28 +1,23 @@
 import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { ReactLenis } from 'lenis/react';
-import Navbar from './components/layout/Navbar';
-import Home from './pages/Home';
-import Courses from './pages/Courses';
-import Departments from './pages/Departments';
-import Placements from './pages/Placements';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import { useLocation } from 'react-router-dom';
+import Landing from './pages/Landing';
+import DepartmentDetails from './pages/DepartmentDetails';
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <ReactLenis root>
-      <div className="antialiased text-white min-h-screen selection:bg-ajce-gold selection:text-black">
-        <Navbar />
-        <main>
-          <Home />
-          <Courses />
-          <Departments />
-          <Placements />
-          <About />
-          <Contact />
-        </main>
+      <div className="bg-black min-h-screen">
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/department/:id" element={<DepartmentDetails />} />
+        </Routes>
       </div>
     </ReactLenis>
   );

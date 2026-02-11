@@ -1,0 +1,38 @@
+.chroma-grid {
+    position: relative;
+    /* Grid system is managed by parent or props, this is a wrapper */
+    display: block;
+    --x: 50%;
+    --y: 50%;
+    --r: 300px;
+}
+
+/* The Content Layer (Colorful) */
+/* No special styles needed, it just sits there */
+
+/* The Overlay Layer (Dull) */
+.chroma-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+
+    /* Dulls everything down */
+    backdrop-filter: grayscale(1) brightness(0.5);
+    -webkit-backdrop-filter: grayscale(1) brightness(0.5);
+    background: transparent;
+
+    /* The core logic: */
+    /* Transparent hole where mouse is (shows color underneath) */
+    /* Black/Opaque everywhere else (shows dull filter) */
+    mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+            transparent 0%,
+            transparent 20%,
+            black 100%);
+    -webkit-mask-image: radial-gradient(circle var(--r) at var(--x) var(--y),
+            transparent 0%,
+            transparent 20%,
+            black 100%);
+
+    transition: opacity 0.3s ease;
+}
