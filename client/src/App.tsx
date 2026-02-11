@@ -1,8 +1,16 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
 import { ReactLenis } from 'lenis/react';
-import Landing from './pages/Landing';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Home from './pages/Home';
+import Courses from './pages/Courses';
+import Departments from './pages/Departments';
+import Placements from './pages/Placements';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import AboutDetailed from './pages/AboutDetailed';
 import DepartmentDetails from './pages/DepartmentDetails';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const { pathname } = useLocation();
@@ -12,14 +20,25 @@ function App() {
   }, [pathname]);
 
   return (
-    <ReactLenis root>
-      <div className="bg-black min-h-screen">
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/department/:id" element={<DepartmentDetails />} />
-        </Routes>
-      </div>
-    </ReactLenis>
+    <Routes>
+      <Route path="/" element={
+        <ReactLenis root>
+          <div className="antialiased text-white min-h-screen selection:bg-ajce-gold selection:text-black">
+            <Navbar />
+            <main>
+              <Home />
+              <Courses />
+              <Departments />
+              <Placements />
+              <About />
+              <Contact />
+            </main>
+          </div>
+        </ReactLenis>
+      } />
+      <Route path="/about-detailed" element={<AboutDetailed />} />
+      <Route path="/department/:id" element={<DepartmentDetails />} />
+    </Routes>
   );
 }
 
