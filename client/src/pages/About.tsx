@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import RevealText from '../components/layout/RevealText.jsx';
 
 const About = () => (
-    <section id="about" className="min-h-screen text-white flex flex-col justify-center p-8">
+    <section id="about" className="min-h-screen text-white flex flex-col justify-center p-8 scroll-mt-20">
         <div className="container mx-auto">
             <RevealText text="ABOUT AJCE" className="text-4xl md:text-6xl font-serif mb-8 text-white" />
 
