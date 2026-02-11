@@ -24,3 +24,18 @@ body {
   min-height: 100vh;
   /* Removed flex and place-items center to allow scrolling layout */
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
