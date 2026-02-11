@@ -14,9 +14,7 @@ import { useLocation } from 'react-router-dom';
 function App() {
 
   return (
-<<<<<<< HEAD
     <Routes>
-      {/* Main single-page layout */}
       <Route path="/" element={
         <ReactLenis root>
           <div className="antialiased text-white min-h-screen selection:bg-ajce-gold selection:text-black">
@@ -25,32 +23,15 @@ function App() {
               <Home />
               <Courses />
               <Departments />
-              <Faculty />
+              <Placements />
               <About />
               <Contact />
             </main>
           </div>
         </ReactLenis>
       } />
-
-      {/* Detailed About page */}
       <Route path="/about-detailed" element={<AboutDetailed />} />
     </Routes>
-=======
-    <ReactLenis root>
-      <div className="antialiased text-white min-h-screen selection:bg-ajce-gold selection:text-black">
-        <Navbar />
-        <main>
-          <Home />
-          <Courses />
-          <Departments />
-          <Placements />
-          <About />
-          <Contact />
-        </main>
-      </div>
-    </ReactLenis>
->>>>>>> 6a8821aa01cfd072d331c1b058e202cc845174a2
   );
 }
 
