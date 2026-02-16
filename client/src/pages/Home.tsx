@@ -1,6 +1,7 @@
 
 import RevealText from '../components/layout/RevealText.jsx';
 import { ArrowRight } from 'lucide-react';
+import ajceCampusImg from '../assets/ajce_campus.jpg';
 
 const Home = () => {
     return (
@@ -8,7 +9,7 @@ const Home = () => {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/ajce_campus.jpg"
+                    src={ajceCampusImg}
                     alt="Amal Jyothi College Campus"
                     className="w-full h-full object-cover opacity-60"
                 />
